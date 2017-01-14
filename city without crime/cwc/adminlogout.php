@@ -1,0 +1,14 @@
+<?php
+include_once("cwcblogic.php");
+session_start();
+if(isset($_SESSION['name']))
+{
+    unset($_SESSION['name']);
+    session_destroy();
+    header("location:adminpage.php");
+}
+else
+{
+    header("location:adminpage.php");
+}
+?>
